@@ -31,13 +31,14 @@ pre[class*='language-'] {
 	direction: ltr;
 	cursor: text;
 	letter-spacing: normal;
+	word-wrap: break-word;
 }
 
 // code blocks
 pre[class*='language-'] {
 	overflow: auto;
-	margin: 1em 0;
-	padding: 1.2em;
+	margin: 0; //1em 0;
+	padding: 0; //1.2em;
 	border-radius: 3px;
 	font-size: 85%;
 }

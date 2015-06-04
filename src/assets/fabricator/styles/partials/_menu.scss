@@ -45,7 +45,7 @@
 		color: map-get($colors, menu-text) !important;
 		text-decoration: none;
 		font-size: 0.75rem;
-		line-height: 1;
+		line-height: .25em;
 
 		&:hover {
 			color: map-get($colors, menu-text) !important;

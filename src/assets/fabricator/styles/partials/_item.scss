@@ -31,10 +31,17 @@
 }
 
 .f-item-code {
-	margin-top: 2rem;
+	margin-top: -1px; //2rem;
+	padding: 1rem;
+	background-color: map-get($colors, light-gray);
+	border: 1px solid #c0c0c0;
+	border-radius: 0 0 4px 4px;
 }
 
 .f-item-preview {
+	padding: 1rem;
+	border: 1px solid #c0c0c0;
+	border-radius: 4px 4px 0 0;
 	@include clearfix;
 }
 
