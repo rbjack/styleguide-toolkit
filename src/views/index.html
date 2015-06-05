@@ -20,16 +20,19 @@ fabricator: true
 
 <h2>Color</h2>
 
-{{#each toolkit.colors}}
-	<div class="f-color-chips">
-	{{#each this}}
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">{{@key}}</div>
-			<div class="f-color-chip__color">{{this}}</div>
-		</div>
-	{{/each}}
+<!--
+http://sassmeister.com/gist/3e2ffeb13aae7aaad703
+http://www.sitepoint.com/using-sass-maps/
+-->
+
+<div class="f-color-chips">
+{{#each colors}}
+	<div class="f-color-chip">
+		<div class="f-color-chip__name">{{@key}}</div>
+		<div class="f-color-chip__color">{{this}}</div>
 	</div>
 {{/each}}
+</div>
 
 <h2>Typography</h2>
 

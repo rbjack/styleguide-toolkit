@@ -2,7 +2,10 @@
  * Toolkit styles
  */
 
+@import '../../../../src/data/colors.json'; // $colors
+
 
 body {
 	font-family: sans-serif;
+	content: map-get($colors, Dark);
 }
