@@ -2,10 +2,10 @@
  * Toolkit styles
  */
 
-@import '../../../../src/data/colors.json'; // $colors
+@import '../../../../src/data/colors.yml'; // $colors
 
 
 body {
 	font-family: sans-serif;
-	content: map-get($colors, Dark);
+	background-color: map-get($colors, Blue-Cornflower);
 }
