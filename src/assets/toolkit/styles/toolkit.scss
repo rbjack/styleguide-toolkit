@@ -7,7 +7,7 @@
 @import "generic/all";		// resets and normalize
 @import "base/all"; 			// styling that targets plain HTML elements (usually no classes in here)
 @import "objects/all"; 		// basic design patterns and re-usable abstractions
-@import "components/all"; // styled modifications to objects (through javascript or vender plugin)
+@import "widgets/all"; 		// style modifications of objects (through javascript or vender plugins)
 @import "helpers/all"; 		// utility, state and/or device overrides - these usually have !important rules, and that's okay. They come last, and they're designed to take precedence over all 
 
 body {

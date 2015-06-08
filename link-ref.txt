@@ -33,3 +33,7 @@ http://component.io/
 http://toddmotto.com/mastering-the-module-pattern/
 http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html
 http://eloquentjavascript.net/10_modules.html
+https://css-tricks.com/how-do-you-structure-javascript-the-module-pattern-edition/
+http://stackoverflow.com/questions/17776940/javascript-module-pattern-with-example
+http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript
+https://blog.safaribooksonline.com/2013/09/26/getting-started-with-requirejs-and-amd/
