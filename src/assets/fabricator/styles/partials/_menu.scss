@@ -41,6 +41,7 @@
 
 	a {
 		display: block;
+		font-family: $base-font-family;
 		padding: 0.5rem 2rem;
 		color: map-get($colors, menu-text) !important;
 		text-decoration: none;
