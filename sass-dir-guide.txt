@@ -1,0 +1,75 @@
++-- css // contains all sass and compiled CSS files
+|   |
+|   +-- sass
+|   |   |
+|   |   +-- settings // project variables
+|   |   |   |
+|   |   |   +-- _all.scss // _all.scss files import the others in the same folder, so this one file can be imported into the main app.scss file
+|   |   |   +-- _color.scss
+|   |   |   +-- _type.scss
+|   |   |   +-- _vars.scss
+|   |   |
+|   |   +-- tools // the Precedent mixin library
+|   |   |   |
+|   |   |   +-- helpers // helper mixins for common tasks
+|   |   |   |   |
+|   |   |   |   +-- _clearfix.scss
+|   |   |   |   +-- _hide-text.scss
+|   |   |   |   +-- _image-replacement.scss
+|   |   |   |   +-- _image-retina.scss
+|   |   |   |   +-- _prefixer.scss
+|   |   |   |
+|   |   |   +-- mixins // mixins for CSS3 features
+|   |   |   |   |
+|   |   |   |   +-- _font-face.scss
+|   |   |   |   +-- _media-query--hidpi.scss
+|   |   |   |   +-- _media-query.scss
+|   |   |   |   +-- _prefix.scss
+|   |   |   |   +-- _transform.scss
+|   |   |   |   +-- _transition.scss
+|   |   |   |
+|   |   |   +-- functions // handy functions
+|   |   |   |   |
+|   |   |   |   +-- _em-calc.scss
+|   |   |   |   +-- _grid-flex.scss
+|   |   |   |   +-- _percentage.scss
+|   |   |   |   +-- _strip-units.scss
+|   |   |   |
+|   |   |   +-- _all.scss // this file imports all tools
+|   |   |
+|   |   +-- generic // resets and normalize
+|   |   |   |
+|   |   |   +-- _all.scss
+|   |   |   +-- _normalize.scss
+|   |   |   +-- _reset.scss
+|   |   |
+|   |   +-- base // styling that targets plain HTML elements (usually no classes in here)
+|   |   |   |
+|   |   |   +-- _all.scss
+|   |   |   +-- _form-elements.scss
+|   |   |   +-- _headings.scss
+|   |   |   +-- _links.scss
+|   |   |   +-- _page.scss
+|   |   |
+|   |   +-- objects // basic design patterns and re-usable abstractions
+|   |   |   |
+|   |   |   +-- _all.scss
+|   |   |   +-- _accordion.scss
+|   |   |   +-- _buttons.scss
+|   |   |
+|   |   +-- components // styled components and modules
+|   |   |   |
+|   |   |   +-- _all.scss
+|   |   |   +-- _accordion--primary.scss
+|   |   |
+|   |   +-- trumps // overrides - these usually have !important rules, and that's okay. They come last, and they're designed to take precedence over all other styles
+|   |   |   |
+|   |   |   +-- _all.scss
+|   |   |   +-- _helpers.scss // float-right, mobile-only, etc.
+|   |   |   +-- _print.scss // print styles are typically overriding everything that came befroe
+|   |   |
+|   |   +-- app.scss // this file imports every _all.scss partial listed above, in the order shown (very important)
+|   |
+|   +-- app.css // this is the expanded compiled CSS, with comments
+|   +-- app.min.css // this is the minified compiled CSS (Mixture handles these two). This is the only CSS file that should be delivered for back-end integration
+|
