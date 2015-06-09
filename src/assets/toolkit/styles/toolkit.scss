@@ -6,9 +6,11 @@
 @import "settings/all"; 	// project variables
 @import "generic/all";		// resets and normalize
 @import "base/all"; 			// styling that targets plain HTML elements (usually no classes in here)
+@import "helpers/all"; 		// utility, state and/or device queries - these usually have !important rules, and that's okay.
 @import "objects/all"; 		// basic design patterns and re-usable abstractions
-@import "widgets/all"; 		// style modifications of objects (through javascript or vender plugins)
-@import "helpers/all"; 		// utility, state and/or device queries - these usually have !important rules, and that's okay. They come last, and they're designed to take precedence over all 
+@import "widgets/all"; 		// modifications to object styles (through javascript) and vender styles
+// theme?
+
 
 body {
 	font-family: sans-serif;
