@@ -2,7 +2,8 @@
 #
 # Order from smallest to largest.
 # Resevered word 'xs' will render as the max-width from 
-# the smallest width in the list, example = xs: (< sm - 1px).
+# the first items (should be the smallest) width in the 
+# list, example = xs: (sm - 1px).
 #
 sm: 750px
 md: 992px

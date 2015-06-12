@@ -6,8 +6,17 @@
  * Breakpoints included
  */
 
+/*
+@include eq-selector($namespace, $appendNamespaceSep, $prefix, $appendPrefixSep, )
+*/
+
 .u-after1of12 {
   margin-right: calc(100% * 1 / 12) !important;
+  /*
+  @include eq('sm', 'md', 'lg') {
+    margin-right: calc(100% * 1 / 12) !important;
+  }
+  */
 }
 
 // @include breakpointSelector(namespace, appendNamespaceSep, prefix, appendPrefixSep, prependPostfixSep, postfix, onlyBreakpoints = false) {

@@ -1,6 +1,1 @@
-@mixin respond-to-min($breakpoint)
-{
-	@media only screene and (min-width: $breakpoint) {
-		@content;
-	}
-}
+// use bourbon neat media mixin as example

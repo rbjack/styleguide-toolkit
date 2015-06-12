@@ -1,24 +1,72 @@
 .Media {
 	// Proper spacing between instances of .media
-  margin-top: 15px;
+  margin-top: 15px; // TODO: $gutter
 
   &:first-child {
     margin-top: 0;
   }
 }
 
-.Media__object {
-
-}
-
-.Media__heading {
-	
-}
-
+.Media,
 .Media__body {
-
+	zoom: 1;
+	overflow: hidden;
 }
 
+/**
+ * 1. Avoid shrink-wrap behaviour of table-cell
+ */
+.Media__body {
+	width: 10000px; /* 1 */
+}
+
+.Media__object {
+  display: block;
+}
+
+.Media--right,
+.Media > .is-pulledRight {
+	padding-left: 10px; // TODO: why 10px?
+}
+
+.Media--left,
+.Media > .is-pulledLeft {
+	padding-right: 10px; // TODO: why 10px?
+}
+
+
+/**
+ * 1. Create a new block formatting context (NBFC).
+ */
+.Media--left,
+.Media--right,
+.Media__body {
+	display: table-cell; /* 1 */
+	vertical-align: top;
+}
+
+.Media--middle {
+	vertical-align: middle;
+}
+
+.Media--bottom {
+	vertical-align: bottom;
+}
+
+/**
+ * 1. Reset margins on headings for tighter default spacing
+ */
+.Media__heading {
+  margin-top: 0; /* 1 */
+  margin-bottom: 5px; /* 1 */
+}
+
+/**
+ * Media list variation
+ *
+ * 1. Undo default ul/ol styles
+ */
 .Media__list {
-	
+  padding-left: 0; /* 1 */
+  list-style: none; /* 1 */
 }

@@ -1,16 +1,17 @@
 # Colors
-dark: "rgb(30, 30, 30)"
-light: "rgb(242, 242, 242)"
-red: "rgb(201, 55, 6)"
-yellow: "rgb(252, 207, 80)"
-blue: "rgb(39, 102, 143)"
-blue-cornflower: "rgb(97, 149, 237)"
+dark: 									"rgb(30, 30, 30)"
+light: 									"rgb(242, 242, 242)"
+red: 										"rgb(201, 55, 6)"
+yellow: 								"rgb(252, 207, 80)"
+blue: 									"rgb(39, 102, 143)"
+blue-cornflower: 				"rgb(97, 149, 237)"
 
 black:									"rgb(0, 0, 0)"
 gray-mineShaft-darker:	"rgb(34, 34, 34)"
 gray-mineShaft-dark:		"rgb(51, 51, 51)"
 gray-emperor:						"rgb(85, 85, 85)"
 gray-boulder:						"rgb(119, 119, 119)"
+silver-solid:						"rgb(192, 192, 192)"
 gray-gallery:						"rgb(238, 238, 238)"
 white:									"rgb(255, 255, 255)"
 
@@ -20,3 +21,4 @@ green-fern:							"rgb(92, 184, 92)" 		#success
 blue-viking:						"rgb(91, 192, 222)" 	#info
 orange-sandyBrown:			"rgb(240, 173, 78)" 	#warning
 red-roman:							"rgb(217, 83, 79)" 		#danger
+yellow-solid:						"rgb(255, 255, 0)"
