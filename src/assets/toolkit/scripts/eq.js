@@ -1,9 +1,3 @@
-/**
- * Toolkit JavaScript
- */
-
-'use strict';
-
 /*
  * The global eqjs object that contains all eq.js functionality.
  *

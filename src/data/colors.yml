@@ -1,10 +1,10 @@
 # Colors
-dark: "rgb(30, 30, 30)"
-light: "rgb(242, 242, 242)"
-red: "rgb(201, 55, 6)"
-yellow: "rgb(252, 207, 80)"
-blue: "rgb(39, 102, 143)"
-blue-cornflower: "rgb(97, 149, 237)"
+dark: 									"rgb(30, 30, 30)"
+light: 									"rgb(242, 242, 242)"
+red: 										"rgb(201, 55, 6)"
+yellow: 								"rgb(252, 207, 80)"
+blue: 									"rgb(39, 102, 143)"
+blue-cornflower: 				"rgb(97, 149, 237)"
 
 black:									"rgb(0, 0, 0)"
 gray-mineShaft-darker:	"rgb(34, 34, 34)"

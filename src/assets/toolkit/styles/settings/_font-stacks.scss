@@ -1,10 +1,22 @@
 @charset "UTF-8";
 
+/// Source Sans Pro font stack.
+///
+/// @type List
+
+$source-sans-pro: "Source Sans Pro", sans-serif;
+
 /// Georgia font stack.
 ///
 /// @type List
 
 $georgia: "Georgia", "Cambria", "Times New Roman", "Times", serif;
+
+/// Monospace font stack.
+///
+/// @type List
+
+$bitstream-vera-sans-mono: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
 
 /// Helvetica font stack.
 ///
@@ -18,14 +30,9 @@ $helvetica: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 
 $lucida-grande: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
 
-/// Monospace font stack.
-///
-/// @type List
-
-$monospace: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
-
 /// Verdana font stack.
 ///
 /// @type List
 
 $verdana: "Verdana", "Geneva", sans-serif;
+
