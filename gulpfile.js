@@ -16,6 +16,7 @@ var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var webpack = require('webpack');
 var importOnce = require('node-sass-import-once');
+var concat = require('gulp-concat');
 
 
 // configuration
@@ -30,6 +31,7 @@ var config = {
 			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
 			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
 		},
+		fonts: 'src/assets/toolkit/fonts/**/*',
 		images: 'src/assets/toolkit/images/**/*',
 		views: 'src/toolkit/views/*.html'
 	},
@@ -71,8 +73,16 @@ gulp.task('styles:toolkit', function () {
 gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
 
 
+gulp.task('scripts:toolkit', function () {
+	return gulp.src([
+		'./src/assets/toolkit/scripts/pre-toolkit.js', 
+		'./src/assets/toolkit/scripts/eq.js'])
+    .pipe(concat('toolkit.js'))
+    .pipe(gulp.dest('./src/assets/toolkit/scripts/'));
+});
+
 // scripts
-gulp.task('scripts', function (done) {
+gulp.task('scripts', ['scripts:toolkit'], function (done) {
 	webpackCompiler.run(function (error, result) {
 		if (error) {
 			gutil.log(gutil.colors.red(error));
@@ -87,6 +97,11 @@ gulp.task('scripts', function (done) {
 	});
 });
 
+// fonts
+gulp.task('fonts', function() {
+	return gulp.src(config.src.fonts)
+		.pipe(gulp.dest(config.dest + '/assets/fonts'))
+});
 
 // images
 gulp.task('images', ['favicon'], function () {
@@ -165,6 +180,7 @@ gulp.task('default', ['clean'], function () {
 	var tasks = [
 		'styles',
 		'scripts',
+		'fonts',
 		'images',
 		'assemble'
 	];

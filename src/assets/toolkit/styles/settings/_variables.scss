@@ -9,17 +9,21 @@
 //
 @import '../../../../../src/data/colors.yml'; // $colors
 
+//== Element queries
+//
+$element-queries: (sm, md, lg); // xxs, xs, sm, md, lg, xl, xxl
+
+
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@import '../../../../../src/data/typography.yml'; // $typography
 
-$font-family-sans-serif:  map-get($typography, font-family-sans-serif);
-$font-family-serif:       map-get($typography, font-family-serif);
+$font-family-sans-serif:  $source-sans-pro;
+$font-family-serif:       $georgia;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:   map-get($typography, font-family-monospace);
-$font-family-base:        map-get($typography, font-family-base);
+$font-family-monospace:   $bitstream-vera-sans-mono;
+$font-family-base:        $font-family-sans-serif;
 
 $font-size-base:          14px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
@@ -39,7 +43,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    inherit !default;
-$headings-font-weight:    500 !default;
+$headings-font-weight:    300 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 

@@ -2,8 +2,6 @@
  * Specify the proportional offset after an element.
  * Intentional redundancy build into each set of unit classes.
  * Supports: 2, 4, 5, 6, 8, 10, 12 section
- *
- * Breakpoints included
  */
 
 /*
@@ -18,14 +16,6 @@
   }
   */
 }
-
-// @include breakpointSelector(namespace, appendNamespaceSep, prefix, appendPrefixSep, prependPostfixSep, postfix, onlyBreakpoints = false) {
-//    @content;
-// }
-
-// @include breakpointSelector('', '', 'u', '-', '-', 'afterNone', true) {
-//    margin-left: 0 !important;
-// }
 
 .u-after1of10 {
   margin-right: 10% !important;
