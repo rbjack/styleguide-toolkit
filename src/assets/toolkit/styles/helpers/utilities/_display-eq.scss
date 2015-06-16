@@ -9,11 +9,11 @@
      * Display-type utilities
      */
 
-    .u-#{$eq}-block {
+    >.u-#{$eq}-block {
       display: block !important;
     }
 
-    .u-#{$eq}-hidden {
+    >.u-#{$eq}-hidden {
       display: none !important;
     }
 
@@ -21,7 +21,7 @@
      * Completely remove from the flow but leave available to screen readers.
      */
 
-    .u-#{$eq}-hiddenVisually {
+    >.u-#{$eq}-hiddenVisually {
       position: absolute !important;
       overflow: hidden !important;
       width: 1px !important;
@@ -31,7 +31,7 @@
       clip: rect(1px, 1px, 1px, 1px) !important;
     }
 
-    .u-#{$eq}-inline {
+    >.u-#{$eq}-inline {
       display: inline !important;
     }
 
@@ -41,20 +41,20 @@
      * 100% of an ancestral container.
      */
 
-    .u-#{$eq}-inlineBlock {
+    >.u-#{$eq}-inlineBlock {
       display: inline-block !important;
       max-width: 100%; /* 1 */
     }
 
-    .u-#{$eq}-table {
+    >.u-#{$eq}-table {
       display: table !important;
     }
 
-    .u-#{$eq}-tableCell {
+    >.u-#{$eq}-tableCell {
       display: table-cell !important;
     }
 
-    .u-#{$eq}-tableRow {
+    >.u-#{$eq}-tableRow {
       display: table-row !important;
     }
 
