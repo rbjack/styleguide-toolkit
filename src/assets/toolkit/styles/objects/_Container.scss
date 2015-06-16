@@ -1,0 +1,10 @@
+$Grid-gutter-size: 20px; // TODO: gutter variable
+
+.Container {
+
+}
+
+.Container--withGutter{
+	padding-left:  ($Grid-gutter-size / 2);
+  padding-right: ($Grid-gutter-size / 2);
+}

@@ -3,7 +3,7 @@
  */
 
 @each $eq in $element-queries {
-  EQ {
+  .EQ {
     @include eq($eq) {
 
       /**

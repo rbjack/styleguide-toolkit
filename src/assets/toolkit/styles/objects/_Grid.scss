@@ -72,11 +72,13 @@ $Grid-gutter-size: 20px; // TODO: gutter variable
  */
 
 .Grid--withGutter {
-  margin: 0 calc(-0.5 * $Grid-gutter-size);
+  margin-left:  ($Grid-gutter-size / -2);
+  margin-right: ($Grid-gutter-size / -2);
 }
 
 .Grid--withGutter > .Grid__cell {
-  padding: 0 calc(0.5 * $Grid-gutter-size);
+  padding-left:  ($Grid-gutter-size / 2);
+  padding-right: ($Grid-gutter-size / 2); //
 }
 
 /* Grid cell
