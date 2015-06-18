@@ -116,3 +116,10 @@ $Grid-gutter-size: 20px; // TODO: gutter variable
   display: block;
   margin: 0 auto;
 }
+
+.Grid__cell--hasBackground {
+  background-image: linear-gradient(to bottom, #6cab26, #6ceb86); /* W3C */
+  background-repeat: repeat-y;
+  background-position: 10px bottom;
+  background-size: calc(100% - 20px) 1px; //
+}
