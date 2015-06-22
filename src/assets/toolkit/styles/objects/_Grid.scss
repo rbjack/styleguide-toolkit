@@ -120,6 +120,11 @@ $Grid-gutter-size: 20px; // TODO: gutter variable
 .Grid__cell--hasBackground {
   background-image: linear-gradient(to bottom, #6cab26, #6ceb86); /* W3C */
   background-repeat: repeat-y;
-  background-position: 10px bottom;
-  background-size: calc(100% - 20px) 1px; //
+  background-position: 0 bottom;
+  background-size: 100% 1px;
+}
+
+.Grid--withGutter > .Grid__cell--hasBackground {
+  background-position: ($Grid-gutter-size / 2) bottom;
+  background-size: calc(100% - #{$Grid-gutter-size}) 1px;
 }
