@@ -2,14 +2,28 @@
  * Toolkit styles
  */
 
+ // ITCSS (Inverted Triangel CSS)
+ // https://www.youtube.com/watch?v=1OKZOV-iLj4&hd=1
+ // https://smacss.com/ (Scalable and Modular Architecture for CSS)
+
 @import "tools/all"; 			// the mixin and function libraries
 @import "settings/all"; 	// project variables
-@import "generic/all";		// resets and normalize
+
+@import "generic/all";		// normalize and/or resets
 @import "base/all"; 			// styling that targets plain HTML elements (usually no classes in here)
-@import "helpers/all"; 		// utility, state, device and element queries - these usually have !important rules, and that's okay.
+
 @import "objects/all"; 		// basic design patterns and re-usable abstractions
 @import "widgets/all"; 		// modifications to object and vender styles. class are added with javascript.
-// theme?
+
+// "blocks/all"; 					// styles based on CMS or MVC directory organization and/or naming conventions
+// "modules/all"; 
+// "components/all"; 
+
+// "themes/all";
+
+// "tests/all"; 					// AB testing, temparary, needs to be incorporated into appropriate directory after use
+
+@import "helpers/all"; 		// utility, state, device and element queries - these usually have !important rules, and that's okay.
 
 
 body {
