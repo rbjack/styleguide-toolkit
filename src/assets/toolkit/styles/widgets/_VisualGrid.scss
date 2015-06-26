@@ -29,7 +29,7 @@
 
 .w-VisualGrid__rhythm {
   &:before {
-    content: "";
+    /*content: "";
     position: fixed;
     display: inline-block;
     width: 100%;
@@ -39,6 +39,21 @@
     //background-size: 100% ($baseline / 2);
     background-position: left top;
     background-repeat: repeat;
-    //z-index: ($z-index-9 + 1);
+    //z-index: ($z-index-9 + 1);*/
+
+    //container inside of "f-item-preview"
+    content: "";
+    position: absolute;
+    display: block;
+    width: calc(100% - 2em);
+    height: calc(100% - 3.5em); // needs testing
+    background-image: -webkit-linear-gradient(rgba(0,255,255,.3).1em,transparent .1em);
+    background-image: linear-gradient(rgba(0,255,255,.3).1em,transparent .1em);
+    background-color: transparent;
+    background-size: 100% 8px;
+    background-position: left top;
+    background-repeat: repeat;
+    z-index: 10;
+    overflow: hidden;
   }
 }
