@@ -28,7 +28,8 @@
 }
 
 
-// https://vimeo.com/17079380 (Tim Brown - More Perfect Typography)
+// https://vimeo.com/17079380 (More Perfect Typography)
+// http://lamb.cc/typograph/
 .w-VisualGrid__rhythm {
   &:before {
     /*content: "";
@@ -52,7 +53,7 @@
     background-image: -webkit-linear-gradient(rgba(0,255,255,.3).1em,transparent .1em);
     background-image: linear-gradient(rgba(0,255,255,.3).1em,transparent .1em);
     background-color: transparent;
-    background-size: 100% 8px;
+    background-size: 100% $base-unit;//100% 8px;
     background-position: left top;
     background-repeat: repeat;
     z-index: 10;
