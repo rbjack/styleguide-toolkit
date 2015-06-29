@@ -6,7 +6,7 @@
 $base-font-size: 16px !global; // (px)
 $base-cap-height: 0.75 !global; // this value has to be adjusted to the font used
 $optical-adjustment-width: 1.1618; // any width needs to be adjusted to look equal to some height
-$base-line-height: 1.2 !global; //1.1618 !global; // ex.: golden ratio
+$base-line-height: 1.25 !global; //1.1618 !global; // ex.: golden ratio
 $base-scale: 2 !global;
 
 //$base-unit: $base-line-height / $base-scale * $base-font-size !global; // (px)
