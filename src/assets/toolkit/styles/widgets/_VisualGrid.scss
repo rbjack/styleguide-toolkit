@@ -50,13 +50,17 @@
     display: block;
     width: calc(100% - 2em);
     height: calc(100% - 3.5em); // needs testing
-    background-image: -webkit-linear-gradient(rgba(0,255,255,.3).1em,transparent .1em);
-    background-image: linear-gradient(rgba(0,255,255,.3).1em,transparent .1em);
+    //background-image: -webkit-linear-gradient(rgba(0,255,255,.3).1em,transparent .1em);
+    //background-image: linear-gradient(rgba(0,255,255,.3).1em,transparent .1em);
     background-color: transparent;
-    background-size: 100% $base-unit;//100% 8px;
-    background-position: left top;
+    //background-size: 100% $base-unit;//100% 8px;
+    //background-position: left top;
     background-repeat: repeat;
     z-index: 10;
     overflow: hidden;
+
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1667) 0%, transparent 20%);
+    background-size: 100% em($base-unit);
+    background-position: left top;
   }
 }

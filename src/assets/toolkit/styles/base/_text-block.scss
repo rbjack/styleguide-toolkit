@@ -17,6 +17,6 @@
 
 p {
 	margin: 0;
-	@include align-to-baseline($offset-top: (1 / 16)); // offset top by 1px to match vertical rhythm grid
+	@include align-to-baseline($offset-top: (7 / 16)); // offset top by 1px to match vertical rhythm grid //
 	max-width: 600px; // copy range of 50-75 characters per line, this suggests the design of the max single column width
 }

@@ -118,8 +118,8 @@ $base-unit: $base-line-height / $base-scale * $base-font-size !global; // (px)
 	// use this mixin only on elements that have one direction margins
 	// http://csswizardry.com/2012/06/single-direction-margin-declarations
 	@if ($method == 2) {
-    padding-top: $baseline-distance + $offset-top; // rem()
-    margin-bottom: $line-height - $baseline-distance - $base-unit + $offset-bottom; // rem()
+    padding-top: rem($baseline-distance + $offset-top); // rem()
+    margin-bottom: rem($line-height - $baseline-distance - $base-unit + $offset-bottom); // rem()
   }
 	// METHOD 3: padding-only
 	@if ($method == 3) {

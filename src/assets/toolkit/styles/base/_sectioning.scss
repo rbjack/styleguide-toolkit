@@ -65,3 +65,13 @@ section {
 }
 
 */
+
+body {
+	@include set-base-font-size($font-size: $base-font-size, $line-height: $base-line-height);
+}
+
+h1 {
+	margin: 0;
+	@include align-to-baseline($font-size: 23px, $offset-top: 0); //
+	font-weight: bold;
+}
