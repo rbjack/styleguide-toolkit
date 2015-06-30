@@ -103,7 +103,7 @@ $base-unit: $base-line-height / $base-scale * $base-font-size !global; // (px)
   // print the results
   font-size: $font-size;
   line-height: em($line-height);
-	$baseline-distance: ($line-height-ratio - $base-cap-height) / $scale * $base-font-size;  // (px)
+	$baseline-distance: ($line-height-ratio - $base-cap-height);// / $scale * $base-font-size;  // (px)
 	$offset-top: $offset-top * $base-unit;  // (px)
 	$offset-bottom: $offset-bottom * $base-unit;  // (px)
 	
