@@ -62,6 +62,8 @@
 |   |   |   +-- _all.scss
 |   |   |   +-- _accordion--primary.scss
 |   |   |
+|   |   +-- helpers // utilities - these usually have !important rules, and that's okay. They come last, and they're designed to take precedence over all other styles 
+|   |   |
 |   |   +-- trumps // overrides - these usually have !important rules, and that's okay. They come last, and they're designed to take precedence over all other styles
 |   |   |   |
 |   |   |   +-- _all.scss
