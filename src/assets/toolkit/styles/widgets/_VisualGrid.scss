@@ -60,7 +60,7 @@
     overflow: hidden;
 
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1667) 0%, transparent 20%);
-    background-size: 100% em($base-unit);
+    background-size: 100% rem($base-unit);
     background-position: left top;
   }
 }

@@ -21,8 +21,7 @@ $element-queries: (xs, sm, md, lg); // xxs, xs, sm, md, lg, xl, xxl
 
 $font-family-sans-serif:  $source-sans-pro;
 $font-family-serif:       $georgia;
-//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:   $bitstream-vera-sans-mono;
+$font-family-monospace:   $bitstream-vera-sans-mono; //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-base:        $font-family-sans-serif;
 
 $font-size-base:          14px !default;
