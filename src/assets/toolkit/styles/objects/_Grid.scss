@@ -101,6 +101,7 @@ $Grid-gutter-size: 20px; // TODO: gutter variable
   font-size: $Grid-font-size; /* 2 */
   margin: 0;
   padding: 0;
+  position: relative;
   text-align: left; /* 3 */
   vertical-align: top; /* 4 */
   width: 100%; /* 5 */
