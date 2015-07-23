@@ -23,7 +23,7 @@
 
 // "tests/all"; 					// AB testing, temparary, needs to be incorporated into appropriate directory after use
 
-@import "helpers/all"; 		// utility, state, device and element queries - these usually have !important rules, and that's okay.
+@import "influencers/all"; 		// overrides, helpers, utilities - these usually have !important rules, and that's okay.
 
 
 body {
