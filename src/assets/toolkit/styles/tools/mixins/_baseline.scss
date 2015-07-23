@@ -98,7 +98,7 @@ $base-unit: $base-line-height / $base-scale * $base-font-size !global; // (px)
   // integer number of base units that can fit the given font-size
   $lines: ceil($font-size / $base-unit);
 	// calculate the new line-height
-	$line-height: $base-unit * $lines;  // (px)
+	$line-height: em($base-unit * $lines);  // (px)
 	$line-height-ratio: $line-height / $base-font-size;
   // print the results
   font-size: $font-size;

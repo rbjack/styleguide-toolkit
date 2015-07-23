@@ -10,7 +10,7 @@
 @import "tools/all"; 			// the mixin and function libraries
 
 @import "generic/all";		// normalize and/or resets
-@import "base/all"; 			// styling that targets plain HTML elements (usually no classes in here)
+@import "elements/all"; 	// styling that targets plain HTML elements (no classes in here)
 
 @import "objects/all"; 		// basic design patterns and re-usable abstractions
 @import "widgets/all"; 		// modifications to object and vender styles. class are added with javascript.
