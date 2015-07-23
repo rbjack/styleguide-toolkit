@@ -12,22 +12,28 @@
 @import "generic/all";		// normalize and/or resets
 @import "elements/all"; 	// styling that targets plain HTML elements (no classes in here)
 
-@import "objects/all"; 		// basic design patterns and re-usable abstractions
-@import "widgets/all"; 		// modifications to object and vender styles. class are added with javascript.
+// (prefixes are optional)
+@import "objects/all"; 		// modular organization of basic design patterns and re-usable abstractions; o-
 
-// "blocks/all"; 					// styles based on CMS or MVC directory organization and/or naming conventions
-// "modules/all"; 
-// "components/all"; 
+// CMS/MVC directory organization and/or naming conventions
+// "blocks/all";					// blocks; b-
+// "modules/all"; 				// modules; m-
+// "components/all"; 			// components; c-
+// "widgets/all"; 				// wysiwyg editor plugins; w-
 
-// "themes/all";
+// "vendors/all";					// plugin styles incorperated into project; {VendorNamespace}-
 
-// "tests/all"; 					// AB testing, temparary, needs to be incorporated into appropriate directory after use
+// "themes/all";					// themes; t-
 
-@import "influences/all"; 		// overrides, helpers, utilities - these usually have !important rules, and that's okay.
+// "tests/all"; 					// AB testing, temparary, needs to be incorporated into appropriate directory after use; ab-
+
+// "jss/all";							// DOM injected/manipulated classes and/or markup using javascript; jss- (js- is used as a javascript hook)
+
+@import "influences/all"; // overrides, helpers, utilities - these usually have !important rules, and that's okay.
 
 
 body {
-	font-family: sans-serif; // to be removed and added to base
+	font-family: sans-serif; // to be removed and added to base elements
 }
 
 //

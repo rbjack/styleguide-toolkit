@@ -1,4 +1,4 @@
-.w-VisualGrid {
+.VisualGrid {
   display: block;
   // max-width
   // clearfix
@@ -19,7 +19,7 @@
 
 }
 
-.w-VisualGrid__cell {
+.VisualGrid__cell {
   //@include span-columns(1, custom);
   //@include omega(#{$grid-columns}n);
   //background-color: rgba($visual-grid-color, $visual-grid-opacity);
@@ -30,7 +30,7 @@
 
 // https://vimeo.com/17079380 (More Perfect Typography)
 // http://lamb.cc/typograph/
-.w-VisualGrid__rhythm {
+.VisualGrid__rhythm {
   &:before {
     /*content: "";
     position: fixed;
