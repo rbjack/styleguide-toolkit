@@ -1,10 +1,12 @@
 .Media {
-	// Proper spacing between instances of .media
-  margin-top: 15px; // TODO: $gutter
+	@include theme(default, dark) {
+		// Proper spacing between instances of .media
+	  margin-top: 15px; // TODO: $gutter
 
-  &:first-child {
-    margin-top: 0;
-  }
+	  &:first-child {
+	    margin-top: 0;
+	  }
+	}
 }
 
 .Media,
@@ -26,12 +28,16 @@
 
 .Media--right,
 .Media > .u-floatRight {
-	padding-left: 10px; // TODO: why 10px?
+	@include theme(default) {
+		padding-left: 10px;
+	}
 }
 
 .Media--left,
 .Media > .u-floatLeft {
-	padding-right: 10px; // TODO: why 10px?
+	@include theme(default) {
+		padding-right: 10px; // TODO: why 10px?
+	}
 }
 
 
@@ -57,8 +63,10 @@
  * 1. Reset margins on headings for tighter default spacing
  */
 .Media__heading {
-  margin-top: 0; /* 1 */
-  margin-bottom: 5px; /* 1 */
+	@include theme(default) {
+	  margin-top: 0; /* 1 */
+	  margin-bottom: 5px; /* 1 */
+	}
 }
 
 /**
@@ -67,6 +75,8 @@
  * 1. Undo default ul/ol styles
  */
 .Media__list {
-  padding-left: 0; /* 1 */
-  list-style: none; /* 1 */
+	@include theme(default) {
+	  padding-left: 0; /* 1 */
+	  list-style: none; /* 1 */
+	}
 }

@@ -43,7 +43,7 @@
 |   |   |   +-- _normalize.scss
 |   |   |   +-- _reset.scss
 |   |   |
-|   |   +-- base // styling that targets plain HTML elements (usually no classes in here)
+|   |   +-- elements // styling that targets plain HTML elements (usually no classes in here)
 |   |   |   |
 |   |   |   +-- _all.scss
 |   |   |   +-- _form-elements.scss
@@ -62,9 +62,7 @@
 |   |   |   +-- _all.scss
 |   |   |   +-- _accordion--primary.scss
 |   |   |
-|   |   +-- helpers // utilities - these usually have !important rules, and that's okay. They come last, and they're designed to take precedence over all other styles 
-|   |   |
-|   |   +-- trumps // overrides - these usually have !important rules, and that's okay. They come last, and they're designed to take precedence over all other styles
+|   |   +-- influences // helpers, overrides, utilities - these usually have !important rules, and that's okay. They come last, and they're designed to take precedence over all other styles
 |   |   |   |
 |   |   |   +-- _all.scss
 |   |   |   +-- _helpers.scss // float-right, mobile-only, etc.
