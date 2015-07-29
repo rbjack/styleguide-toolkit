@@ -1,0 +1,9 @@
+@mixin theme($types...) {
+	$output: 'true';
+	@each $type in $types {
+		@if $type == $brand and $output == 'true' {
+			$output: 'false';
+			@content;
+		}
+	}
+}
