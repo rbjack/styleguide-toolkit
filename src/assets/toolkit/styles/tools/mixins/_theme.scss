@@ -1,0 +1,11 @@
+// Brand-specific styles dictated in the variables
+//
+@mixin theme($types...) {
+	$output: 'true';
+	@each $type in $types {
+		@if $brand == $type and $output == 'true' {
+			$output: 'false';
+			@content;
+		}
+	}
+}
