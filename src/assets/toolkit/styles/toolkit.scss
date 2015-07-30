@@ -6,8 +6,8 @@
  // https://www.youtube.com/watch?v=1OKZOV-iLj4&hd=1
  // https://smacss.com/ (Scalable and Modular Architecture for CSS)
 
-@import "settings/all"; 	// project variables
 @import "tools/all"; 			// the mixin and function libraries
+@import "settings/all"; 	// project variables
 
 @import "generic/all";		// normalize and/or resets
 @import "elements/all"; 	// styling that targets plain HTML elements (no classes in here)
