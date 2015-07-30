@@ -24,8 +24,13 @@ var config = {
 	dev: gutil.env.dev,
 	src: {
 		scripts: {
-			fabricator: './src/assets/fabricator/scripts/fabricator.js',
-			toolkit: './src/assets/toolkit/scripts/toolkit.js'
+			fabricator: 	[
+											'./src/assets/fabricator/scripts/fabricator.js'
+										],
+			toolkit: 			[
+											'./src/assets/toolkit/scripts/pre-toolkit.js',
+											'./src/assets/toolkit/scripts/eq.js'
+										]
 		},
 		styles: {
 			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
@@ -74,9 +79,7 @@ gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
 
 
 gulp.task('scripts:toolkit', function () {
-	return gulp.src([
-		'./src/assets/toolkit/scripts/pre-toolkit.js', 
-		'./src/assets/toolkit/scripts/eq.js'])
+	return gulp.src(config.src.scripts.toolkit)
     .pipe(concat('toolkit.js'))
     .pipe(gulp.dest('./src/assets/toolkit/scripts/'));
 });
