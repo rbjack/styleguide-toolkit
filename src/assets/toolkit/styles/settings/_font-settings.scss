@@ -1,0 +1,45 @@
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+
+// Maximum of 6 font sizes
+$font-size: 						 14px !default;
+
+$font-size-1:            floor(($font-size * 2.6)) !default; // ~36px
+$font-size-2:            floor(($font-size * 2.15)) !default; // ~30px
+$font-size-3:            ceil(($font-size * 1.7)) !default; // ~24px
+$font-size-4:            ceil(($font-size * 1.25)) !default; // ~18px
+$font-size-5:            $font-size;
+$font-size-6:            ceil(($font-size * 0.85)) !default; // ~12px
+
+// Font family variables
+$font-family-sans-serif:  $verdana;
+@include theme(default) {
+	$font-family-sans-serif: $source-sans-pro;
+}
+$font-family-serif:       $georgia;
+$font-family-monospace:   $bitstream-vera-sans-mono; //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+
+
+
+// Font base variable settings
+$font-family-base:        $font-family-sans-serif;
+$font-family-heading:			inherit !default;
+
+$font-size-base:          $font-size-5;
+$font-size-large:         $font-size-4;
+$font-size-small:         $font-size-6;
+
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429 !default; // 20/14
+
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:    inherit !default;
+$headings-font-weight:    300 !default;
+$headings-line-height:    1.1 !default;
+$headings-color:          inherit !default;

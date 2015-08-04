@@ -1,0 +1,240 @@
+$body-bg: white;
+$table-bg: silver;
+$table-cell-padding: 10px;
+$text-muted: #333;
+$line-height-computed: 1em;
+$line-height-base: 1em;
+$table-border-color: #000;
+$table-condensed-cell-padding: 5px;
+$table-bg-accent: #cecece;
+$table-bg-hover: #aeaeae;
+$table-bg-active: yellow;
+$state-success-bg: green;
+$state-info-bg: blue;
+$state-warning-bg: orange;
+$state-danger-bg: red;
+
+
+//
+// Tables
+// --------------------------------------------------
+
+
+.Table {
+  @include theme(default) {
+    background-color: $table-bg;
+    margin-bottom: $line-height-computed;
+  }
+}
+
+// Nesting
+.Table .Table {
+  background-color: $body-bg;
+}
+
+.Table__caption {
+  @include theme(default) {
+    padding-top: $table-cell-padding;
+    padding-bottom: $table-cell-padding;
+    color: $text-muted;
+  }
+}
+
+.Table__head,
+.Table__body,
+.Table__foot {
+  > .Table__header,
+  > .Table__data {
+    @include theme(default) {
+      padding: $table-cell-padding;
+      line-height: $line-height-base;
+      border-top: 1px solid $table-border-color;
+    }
+  }
+}
+
+.Table__head > .Table__header {
+  @include theme(default) {
+    border-bottom: 2px solid $table-border-color;
+  }
+  
+}
+
+// Remove top border from thead by default
+.Table__caption + .Table__head,
+.Table__colgroup + .Table__head,
+.Table__head:first-child {
+  > .Table__row:first-child {
+    .Table__header,
+    .Table__data {
+      @include theme(default) {
+        border-top: 0;
+      }
+    }
+  }
+}
+
+// Account for multiple tbody instances
+.Table__body + .Table__body {
+  @include theme(default) {
+    border-top: 2px solid $table-border-color;
+  }
+}
+
+// Condensed table w/ half padding
+.Table--condensed {
+  > .Table__head,
+  > .Table__body,
+  > .Table__foot {
+    > .Table__header,
+    > .Table__data {
+      @include theme(default) {
+        padding: $table-condensed-cell-padding;
+      }
+    }
+  }
+}
+
+
+// Bordered version
+//
+// Add borders all around the table and between all the columns.
+
+.Table--bordered {
+  @include theme(default) {
+    border: 1px solid $table-border-color;
+  }
+
+  > .Table__head,
+  > .Table__body,
+  > .Table__foot {
+    > .Table__header,
+    > .Table__data {
+      @include theme(default) {
+        border: 1px solid $table-border-color;
+      }
+    }
+  }
+
+  > .Table__head {
+    > .Table__header,
+    > .Table__data {
+      @include theme(default) {
+        border-bottom-width: 2px;
+      }
+    }
+  }
+}
+
+
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+.Table--striped {
+  > .Table__body > .Table__row:nth-of-type(odd) {
+    @include theme(default) {
+      background-color: $table-bg-accent;
+    }
+  }
+}
+
+
+// Hover effect
+//
+// Placed here since it has to come after the potential zebra striping
+
+.Table--hover {
+  > .Table__body > .Table__row:hover {
+    @include theme(default) {
+      background-color: $table-bg-hover;
+    }
+  }
+}
+
+
+// Table backgrounds
+//
+// Exact selectors below required to override `.table-striped` and prevent
+// inheritance to nested tables.
+
+// Generate the contextual variants
+@include theme(default) {
+  @include table-row-varient(active, $table-bg-active);
+  @include table-row-varient(success, $state-success-bg);
+  @include table-row-varient(info, $state-info-bg);
+  @include table-row-varient(warning, $state-warning-bg);
+  @include table-row-varient(danger, $state-danger-bg);
+}
+
+
+
+// Responsive tables
+//
+// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
+// by enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+
+.Table--responsive {
+  overflow-x: auto;
+  min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+
+  @include eq-contains($element-queries(xs)) {
+    width: 100%;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    @include theme(default) {
+      margin-bottom: ($line-height-computed * 0.75);
+      border: 1px solid $table-border-color;
+    }
+
+    // Tighten up spacing
+    > .Table {
+      margin-bottom: 0;
+
+      // Ensure the content doesn't wrap
+      > .Table__head,
+      > .Table__body,
+      > .Table__foot {
+        > .Table__header,
+        > .Table__data {
+          white-space: nowrap;
+        }
+      }
+    }
+
+    // Special overrides for the bordered tables
+    > .Table--bordered {
+      border: 0;
+
+      // Nuke the appropriate borders so that the parent can handle them
+      > .Table__head,
+      > .Table__body,
+      > .Table__foot {
+        > .Table__header:first-child,
+        > .Table__data:first-child {
+          border-left: 0;
+        }
+
+        > .Table__header:last-child,
+        > .Table__data:last-child {
+          border-right: 0;
+        }
+      }
+
+      // Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+      // chances are there will be only one `tr` in a `thead` and that would
+      // remove the border altogether.
+      > .Table__body,
+      > .Table__foot {
+        > .Table__row:last-child {
+          > .Table__header,
+          > .Table__footer {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

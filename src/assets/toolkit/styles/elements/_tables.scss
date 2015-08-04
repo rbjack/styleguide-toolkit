@@ -7,60 +7,84 @@
  // may place it elsewhere, relative to the table.
  //
 caption {
-
+	text-align: left;
 }
 
 // Column Element defines a column within a table and 
 // is used for defining common semantics on all common cells. 
 // It is generally found within a <colgroup> element.
 //
-col {
-
-}
+col {}
 
 // Column Group Element defines a group of columns within a table.
 //
-colgroup {
-
-}
+colgroup {}
 
 // Table Element represents data in two dimensions or more.
 table {
-
+	width: 100%;
+  max-width: 100%;
 }
 
 // Table Body Element
-tbody {
-
-}
+tbody {}
 
 // Table cell HTML element defines a cell of a table that contains 
 // data. It participates in the table model.
-td {
-
-}
+td {}
 
 // Foot Element defines a set of rows summarizing the columns of the table.
-tfoot {
-
-}
+tfoot {}
 
 // Header Cell Element (<th>) defines a cell that is a header for a 
 // group of cells of a table. The group of cells that the header refers 
 // to is defined by the scope and headers attribute.
 th {
-
+	text-align: left;
 }
 
 // Head Element (<thead>) defines a set of rows defining the head of 
 // the columns of the table.
-thead {
-
-}
+thead {}
 
 // Row Element defines a row of cells in a table. 
 // Those can be a mix of <td> and <th> elements.
-tr {
+tr {}
 
+// Top align
+thead,
+tbody,
+tfoot {
+	tr {
+		th, 
+		td {
+      vertical-align: top;
+    }
+  }
 }
 
+// Bottom align for column headings
+thead > tr > th {
+	vertical-align: bottom;
+}
+
+// Table cell sizing
+//
+// Reset default table behavior
+
+table col[class*="col-"] {
+  position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
+  float: none;
+  display: table-column;
+}
+
+table {
+  td,
+  th {
+    &[class*="col-"] {
+      position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
+      float: none;
+      display: table-cell;
+    }
+  }
+}
