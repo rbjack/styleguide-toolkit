@@ -1,10 +1,17 @@
 $Grid-gutter-size: 20px; // TODO: gutter variable
 
+/* Container for Grid Cell
+   ========================================================================== */
+
+/**
+ * 1. Use padding on a container, or `overflow-x:hidden` to protect against it.
+ */
+
 .Container {
 
-}
-
-.Container--withGutter{
-	padding-left:  ($Grid-gutter-size / 2);
-  padding-right: ($Grid-gutter-size / 2);
+	// Modifier: gutters
+	@include theme(default) {
+		padding-left:  ($Grid-gutter-size / 2); /* 1 */
+  	padding-right: ($Grid-gutter-size / 2); /* 1 */
+	}
 }
