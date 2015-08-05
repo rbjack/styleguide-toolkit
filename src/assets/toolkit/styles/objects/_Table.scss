@@ -316,9 +316,3 @@ $state-danger-bg: red;
     }
   }
 }
-
-.zz {
-  @include eq('xs') {
-    width: inherit;
-  }
-}
