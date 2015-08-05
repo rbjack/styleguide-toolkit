@@ -17,6 +17,7 @@ var sass = require('gulp-sass');
 var webpack = require('webpack');
 var importOnce = require('node-sass-import-once');
 var concat = require('gulp-concat');
+var minifyCss = require('gulp-minify-css');
 
 
 // configuration
@@ -70,6 +71,7 @@ gulp.task('styles:toolkit', function () {
 	return gulp.src(config.src.styles.toolkit)
 		.pipe(sass({importer: importOnce}).on('error', sass.logError))
 		.pipe(prefix('last 1 version'))
+		.pipe(minifyCss({semanticMerging: true}))
 		.pipe(gulpif(!config.dev, csso()))
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'))
 		.pipe(gulpif(config.dev, reload({stream:true})));

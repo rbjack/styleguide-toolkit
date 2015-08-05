@@ -40,7 +40,8 @@ $EQ-Selectors: ();
     }
     @each $state in $states {
       &[data-eq-state$="#{$state}"] {
-        @extend %#{$extend};
+        //@extend %#{$extend}; // ERROR: duplicates selector, using gulp-minify-css to DRY styles
+        @content;
       }
     }
   }
@@ -104,8 +105,8 @@ $EQ-Selectors: ();
     content: '#{str-slice(inspect($states), 2, -2)}';
   }
 
-  @if not index($EQ-Selectors, &) {
-    //$EQ-Selectors: append($EQ-Selectors, &, 'comma') !global; // erroring
+  @if not index($EQ-Selectors, '#{&}') {
+    $EQ-Selectors: append($EQ-Selectors, '#{&}', 'comma') !global;
   }
 }
 
