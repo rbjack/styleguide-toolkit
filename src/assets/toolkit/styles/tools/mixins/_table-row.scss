@@ -4,25 +4,24 @@
 
   // Exact selectors below required to override `.table-striped` and prevent
   // inheritance to nested tables.
-  .Table > thead > tr,
-  .Table > tbody > tr,
-  .Table > tfoot > tr {
-    > td.#{$state},
-    > th.#{$state},
-    &.#{$state} > td,
-    &.#{$state} > th {
+  .Table > thead,
+  .Table > tbody,
+  .Table > tfoot, {
+    > tr > .Table__data--#{$state},
+    > tr > .Table__header--#{$state},
+    > .Table__row--#{$state} > td,
+    > .Table__row--#{$state} > th {
       background-color: $background;
     }
   }
 
   // Hover states for `.Table--hover`
   // Note: this is not available for cells or rows within `thead` or `tfoot`.
-  .Table--hover > tbody > tr {
-    > td.#{$state}:hover,
-    > th.#{$state}:hover,
-    &.#{$state}:hover > td,
-    &:hover > .#{$state},
-    &.#{$state}:hover > th {
+  .Table--hover > tbody {
+    > tr > .Table__data--#{$state}:hover,
+    > tr > .Table__header--#{$state}:hover,
+    > .Table__row--#{$state}:hover > td,
+    > .Table__row--#{$state}:hover > th {
       background-color: darken($background, 5%);
     }
   }

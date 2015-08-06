@@ -56,7 +56,9 @@ $state-danger-bg: red;
     > tr:first-child {
       > th,
       > td {
-        border-top: 0;
+        @include theme(default) {
+          border-top: 0;
+        }
       }
     }
   }
@@ -154,11 +156,11 @@ $state-danger-bg: red;
 
 // Generate the contextual variants
 @include theme(default) {
-  @include table-row-varient(s-active, $table-bg-active);
-  @include table-row-varient(s-success, $state-success-bg);
-  @include table-row-varient(s-info, $state-info-bg);
-  @include table-row-varient(s-warning, $state-warning-bg);
-  @include table-row-varient(s-danger, $state-danger-bg);
+  @include table-row-varient(active, $table-bg-active);
+  @include table-row-varient(success, $state-success-bg);
+  @include table-row-varient(info, $state-info-bg);
+  @include table-row-varient(warning, $state-warning-bg);
+  @include table-row-varient(danger, $state-danger-bg);
 }
 
 // Responsive tables
