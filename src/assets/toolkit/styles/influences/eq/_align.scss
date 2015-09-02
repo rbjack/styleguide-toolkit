@@ -1,0 +1,27 @@
+/**
+ * Vertical alignment utilities
+ * Depends on an appropriate `display` value.
+ */
+
+@each $eq in $element-queries {
+  @include eq($eq) {
+
+  	//>.eq-#{$eq}
+		>.eq-#{$eq}-alignBaseline {
+		  vertical-align: baseline !important;
+		}
+
+		>.eq-#{$eq}-alignBottom {
+		  vertical-align: bottom !important;
+		}
+
+		>.eq-#{$eq}-alignMiddle {
+		  vertical-align: middle !important;
+		}
+
+		>.eq-#{$eq}-alignTop {
+		  vertical-align: top !important;
+		}
+
+	}
+}

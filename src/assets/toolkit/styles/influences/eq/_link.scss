@@ -1,0 +1,59 @@
+@each $eq in $element-queries {
+  @include eq($eq) {
+		/**
+		 * Clean link
+		 *
+		 * A link without any text-decoration at all.
+		 */
+
+		>.eq-#{$eq}-linkClean,
+		>.eq-#{$eq}-linkClean:hover,
+		>.eq-#{$eq}-linkClean:focus,
+		>.eq-#{$eq}-linkClean:active {
+		  text-decoration: none !important;
+		}
+
+		/**
+		 * Link complex
+		 *
+		 * A common pattern is to have a link with several pieces of text and/or an
+		 * icon, where only one piece of text should display the underline when the
+		 * link is the subject of user interaction.
+		 *
+		 * Example HTML:
+		 *
+		 * <a class="u-linkComplex" href="#">
+		 *   Link complex
+		 *   <span class="u-linkComplexTarget">target</span>
+		 * </a>
+		 */
+
+		>.eq-#{$eq}-linkComplex,
+		>.eq-#{$eq}-linkComplex:hover,
+		>.eq-#{$eq}-linkComplex:focus,
+		>.eq-#{$eq}-linkComplex:active {
+		  text-decoration: none !important;
+		}
+
+		>.eq-#{$eq}-linkComplex:hover .u-linkComplexTarget,
+		>.eq-#{$eq}-linkComplex:focus .u-linkComplexTarget,
+		>.eq-#{$eq}-linkComplex:active .u-linkComplexTarget {
+		  text-decoration: underline !important;
+		}
+
+		/**
+		 * Block-level link
+		 *
+		 * Combination of traits commonly used in vertical navigation lists.
+		 */
+
+		>.eq-#{$eq}-linkBlock,
+		>.eq-#{$eq}-linkBlock:hover,
+		>.eq-#{$eq}-linkBlock:focus,
+		>.eq-#{$eq}-linkBlock:active {
+		  display: block !important;
+		  text-decoration: none !important;
+		}
+		
+	}
+}
