@@ -1,22 +1,102 @@
-// text block
-/*
-<dd>	The HTML Description Element (<dd>) indicates the description of a term in a description list (<dl>) element. This element can occur only as a child element of a definition list and it must follow a <dt> element.
-<div>	The HTML <div> element (or HTML Document Division Element) is the generic container for flow content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element (such as <article> or <nav>) is appropriate.
-<dl>	The HTML <dl> Element (or HTML Description List Element) encloses a list of pairs of terms and descriptions. Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).
-<dt>	The HTML <dt> element (or HTML Definition Term Element) identifies a term in a definition list. This element can occur only as a child element of a <dl>. It is usually followed by a <dd> element; however, multiple <dt> elements in a row indicate several terms that are all defined by the immediate next <dd> element.
-<figcaption>	The HTML <figcaption> Element represents a caption or a legend associated with a figure or an illustration described by the rest of the data of the <figure> element which is its immediate ancestor which means <figcaption> can be the first or last element inside a <figure> block. Also, the HTML Figcaption Element is optional; if not provided, then the parent figure element will have no caption.
-<figure>	The HTML <figure> Element represents self-contained content, frequently with a caption (<figcaption>), and is typically referenced as a single unit. While it is related to the main flow, its position is independent of the main flow. Usually this is an image, an illustration, a diagram, a code snippet, or a schema that is referenced in the main text, but that can be moved to another page or to an appendix without affecting the main flow.
-<hr>	The HTML <hr> element represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section). In previous versions of HTML, it represented a horizontal rule. It may still be displayed as a horizontal rule in visual browsers, but is now defined in semantic terms, rather than presentational terms.
-<li>	The HTML List Item Element (<li>) is used to represent an item in a list. It must be contained in a parent element: an ordered list (<ol>), an unordered list (<ul>), or a menu (<menu>). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.
-<main>	The HTML Main Element (<main>) represents the main content of  the <body> of a document or application. The main content area consists of content that is directly related to, or expands upon the central topic of a document or the central functionality of an application. This content should be unique to the document, excluding any content that is repeated across a set of documents such as sidebars, navigation links, copyright information, site logos, and search forms (unless, of course, the document's main function is as a search form).
-<ol>	The HTML <ol> Element (or HTML Ordered List Element) represents an ordered list of items. Typically, ordered-list items are displayed with a preceding numbering, which can be of any form, like numerals, letters or Romans numerals or even simple bullets. This numbered style is not defined in the HTML description of the page, but in its associated CSS, using the list-style-type property.
-<p>	The HTML <p> element (or HTML Paragraph Element) represents a paragraph of text.
-<pre>	The HTML Preformatted Text (<pre>) represents preformatted text. Text within this element is typically displayed in a non-proportional font exactly as it is laid out in the file. Whitespaces inside this element are displayed as typed.
-<ul>	The HTML unordered list element (<ul>) represents an unordered list of items, namely a collection of items that do not have a numerical ordering, and their order in the list is meaningless. Typically, unordered-list items are displayed with a bullet, which can be of several forms, like a dot, a circle or a squared. The bullet style is not defined in the HTML description of the page, but in its associated CSS, using the list-style-type property.
-*/
+/**
+ * Text Block Elements
+ */
 
+// The HTML Description Element indicates the description of a term in a description list 
+// (<dl>) element. This element can occur only as a child element of a definition list and 
+// it must follow a <dt> element.
+dd {}
+
+// The HTML Document Division Element is the generic container for flow content, which does 
+// not inherently represent anything. It can be used to group elements for styling purposes 
+// (using the class or id attributes), or because they share attribute values, such as lang. 
+// It should be used only when no other semantic element (such as <article> or <nav>) is appropriate.
+div {}
+
+// The HTML Description List Element encloses a list of pairs of terms and descriptions. 
+// Common uses for this element are to implement a glossary or to display metadata (a list 
+// of key-value pairs).
+dl {}
+
+// The HTML <dt> element (or HTML Definition Term Element) identifies a term in a 
+// definition list. This element can occur only as a child element of a <dl>. It is usually 
+// followed by a <dd> element; however, multiple <dt> elements in a row indicate several 
+// terms that are all defined by the immediate next <dd> element.
+dt {}
+
+// The HTML Figcaption Element represents a caption or a legend associated with a 
+// figure or an illustration described by the rest of the data of the <figure> element 
+// which is its immediate ancestor which means <figcaption> can be the first or last 
+// element inside a <figure> block. Also, the HTML Figcaption Element is optional; if 
+// not provided, then the parent figure element will have no caption.
+figcaption {}
+
+// The HTML Figure Element represents self-contained content, frequently with a 
+// caption (<figcaption>), and is typically referenced as a single unit. While it 
+// is related to the main flow, its position is independent of the main flow. Usually 
+// this is an image, an illustration, a diagram, a code snippet, or a schema that is 
+// referenced in the main text, but that can be moved to another page or to an appendix 
+// without affecting the main flow.
+figure {}
+
+// The HTML Horizontal Rule element represents a thematic break between 
+// paragraph-level elements (for example, a change of scene in a story, or a 
+// shift of topic with a section). In previous versions of HTML, it represented 
+// a horizontal rule. It may still be displayed as a horizontal rule in visual browsers, 
+// but is now defined in semantic terms, rather than presentational terms.
+hr {}
+
+// The HTML List Item Element (<li>) is used to represent an item in a list. 
+// It must be contained in a parent element: an ordered list (<ol>), an unordered 
+// list (<ul>), or a menu (<menu>). In menus and unordered lists, list items are 
+// usually displayed using bullet points. In ordered lists, they are usually displayed 
+// with an ascending counter on the left, such as a number or letter.
+li {}
+
+// The HTML Main Element represents the main content of  the <body> of a 
+// document or application. The main content area consists of content that 
+// is directly related to, or expands upon the central topic of a document 
+// or the central functionality of an application. This content should be 
+// unique to the document, excluding any content that is repeated across a 
+// set of documents such as sidebars, navigation links, copyright information, 
+// site logos, and search forms (unless, of course, the document's main function 
+// is as a search form).
+main {}
+
+// The HTML Ordered List Element represents an ordered list of items. 
+// Typically, ordered-list items are displayed with a preceding numbering, 
+// which can be of any form, like numerals, letters or Romans numerals or even 
+// simple bullets. This numbered style is not defined in the HTML description 
+// of the page, but in its associated CSS, using the list-style-type property.
+ol {}
+
+// The HTML Paragraph Element represents a paragraph of text.
 p {
 	margin: 0;
-	@include align-to-baseline($offset-top: (7 / 16)); // offset top by 1px to match vertical rhythm grid //
+	@include align-to-baseline($offset-top: (7 / 16)); // offset top by 1px to match vertical rhythm grid
 	max-width: 600px; // copy range of 50-75 characters per line, this suggests the design of the max single column width
+
+	@media print {
+		orphans: 3;
+		widows: 3;
+	}
 }
+
+// The HTML Preformatted Text represents preformatted text. Text within this 
+// element is typically displayed in a non-proportional font exactly as it is 
+// laid out in the file. Whitespaces inside this element are displayed as typed.
+pre {
+	@media print {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+}
+
+// <ul>	The HTML unordered list element (<ul>) represents an unordered list of 
+// items, namely a collection of items that do not have a numerical ordering, and 
+// their order in the list is meaningless. Typically, unordered-list items are 
+// displayed with a bullet, which can be of several forms, like a dot, a circle or 
+// a squared. The bullet style is not defined in the HTML description of the page, 
+// but in its associated CSS, using the list-style-type property.
+ul {}
+

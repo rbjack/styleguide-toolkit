@@ -5,6 +5,7 @@ $text-muted: #333;
 $line-height-computed: 1em;
 $line-height-base: 1em;
 $table-border-color: #000;
+$table-border-color-print: map-get($color, $gray-alto);
 $table-condensed-cell-padding: 5px;
 $table-bg-accent: #cecece;
 $table-bg-hover: #aeaeae;
@@ -22,6 +23,13 @@ $state-danger-bg: red;
 .Table {
   @include theme(default) {
     margin-bottom: $line-height-computed;
+  }
+
+  
+
+  td,
+  th {
+    
   }
   
   // Cells
@@ -101,6 +109,13 @@ $state-danger-bg: red;
 .Table--bordered {
   @include theme(default) {
     border: 1px solid $table-border-color;
+  }
+
+  td,
+  th {
+    @media print {
+      border: 1px solid $table-border-color-print !important;
+    }
   }
 
   > thead,

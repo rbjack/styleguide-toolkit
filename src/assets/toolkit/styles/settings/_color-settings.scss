@@ -4,3 +4,7 @@
 //## name used as a variable
 //
 @import '../../../../../src/data/colors.yml'; // $colors
+
+// how to access colors
+// map-get($color, $key);
+// ex: mag-get($color, $gray-dusty);

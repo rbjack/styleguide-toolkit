@@ -1,3 +1,5 @@
+$body-bg: white;
+
 /**
  * Table Elements
  */
@@ -45,11 +47,21 @@ th {
 
 // Head Element (<thead>) defines a set of rows defining the head of 
 // the columns of the table.
-thead {}
+thead {
+
+  @media print {
+    display: table-header-group; // h5bp.com/t
+  }
+}
 
 // Row Element defines a row of cells in a table. 
 // Those can be a mix of <td> and <th> elements.
-tr {}
+tr {
+
+  @media print {
+    page-break-inside: avoid;
+  }
+}
 
 // Top align
 thead,
@@ -79,12 +91,20 @@ table col[class*="col-"] {
 }
 
 table {
+  @media print {
+    border-collapse: collapse !important;
+  }
+
   td,
   th {
     &[class*="col-"] {
       position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
       float: none;
       display: table-cell;
+    }
+
+    @media print {
+      background-color: $body-bg !important;
     }
   }
 }
