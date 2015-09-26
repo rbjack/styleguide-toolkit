@@ -12,31 +12,17 @@ caption {
 	text-align: left;
 }
 
-// Column Element defines a column within a table and 
-// is used for defining common semantics on all common cells. 
-// It is generally found within a <colgroup> element.
-//
-col {}
-
-// Column Group Element defines a group of columns within a table.
-//
-colgroup {}
-
 // Table Element represents data in two dimensions or more.
 table {
 	width: 100%;
   max-width: 100%;
 }
 
-// Table Body Element
-tbody {}
-
 // Table cell HTML element defines a cell of a table that contains 
 // data. It participates in the table model.
-td {}
-
-// Foot Element defines a set of rows summarizing the columns of the table.
-tfoot {}
+td {
+  text-align: left;
+}
 
 // Header Cell Element (<th>) defines a cell that is a header for a 
 // group of cells of a table. The group of cells that the header refers 

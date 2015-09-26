@@ -68,4 +68,8 @@
 			color: map-get($colors, normal);
 		}
 	}
+
+	.f-menu__item--null {
+		display: none;
+	}
 }

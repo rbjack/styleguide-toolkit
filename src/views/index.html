@@ -20,34 +20,16 @@ fabricator: true
 
 <h2>Color</h2>
 
-<!--
-links to info about map data structure
-http://sassmeister.com/gist/3e2ffeb13aae7aaad703
-http://www.sitepoint.com/using-sass-maps/
-http://codepen.io/AdamBlum/blog/config-objects-with-sass-maps
-http://www.devworkflows.com/posts/getting-scss-auto-prefixer-and-source-map-to-play-nice/
--->
-
-<div class="f-color-chips">
-{{#each colors}}
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">{{@key}}</div>
-		<div class="f-color-chip__color">{{this}}</div>
+{{#each toolkit.colors}}
+	<div class="f-color-chips">
+	{{#each this}}
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">{{@key}}</div>
+			<div class="f-color-chip__color">{{this}}</div>
+		</div>
+	{{/each}}
 	</div>
 {{/each}}
-</div>
-
-<h2>Font Stacks</h2>
-
-<div>
-{{#each font-stacks}}
-	<div>
-		<p><b>{{@key}}</b>: {{this}}</p>
-	</div>
-{{/each}}
-</div>
-
-
 
 <h2>Typography</h2>
 

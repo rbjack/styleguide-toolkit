@@ -14,7 +14,7 @@
 			<a href="{{@key}}.html" class="f-menu__heading">{{name}}</a>
 			<ul>
 				{{#each items}}
-				<li>
+				<li class="f-menu__item--{{@key}}">
 					<a href="{{@../key}}.html#{{@key}}">{{name}}</a>
 				</li>
 				{{/each}}
@@ -28,7 +28,7 @@
 			<ul>
 				{{#each items}}
 				<li>
-					<a href="{{@../key}}/{{@key}}.html">{{name}}</a>
+					<a href="{{@../key}}/{{@key}}.html" target="_blank">{{name}}</a>
 				</li>
 				{{/each}}
 			</ul>

@@ -71,6 +71,18 @@ $Grid-gutter-size: 20px; // TODO: gutter variable
   vertical-align: bottom;
 }
 
+/**
+ * Modifier: Negitve margins for gutters
+ *
+ * 1. This can trigger a horizontal scrollbar if the component is as wide as
+ *    the viewport.
+ */
+
+.Grid--withGutters {
+  margin-left:  ($Grid-gutter-size / -2); /* 1 */
+  margin-right: ($Grid-gutter-size / -2); /* 1 */
+}
+
 /* Grid cell
    ========================================================================== */
 
