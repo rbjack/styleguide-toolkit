@@ -21,7 +21,7 @@ $Grid-gutter-size: 20px; // TODO: gutter variable
  * 2. Remove inter-cell whitespace that appears between `inline-block` child
  *    elements.
  * 3. Ensure consistent default alignment.
- * 4. This can trigger a horizontal scrollbar if the component is as wide as
+ * 1. This can trigger a horizontal scrollbar if the component is as wide as
  *    the viewport.
  */
 
@@ -31,12 +31,6 @@ $Grid-gutter-size: 20px; // TODO: gutter variable
   margin: 0; /* 1 */
   padding: 0; /* 1 */
   text-align: left; /* 3 */
-
-  // Modifier: gutters
-  @include theme(default) {
-    margin-left:  ($Grid-gutter-size / -2); /* 4 */
-    margin-right: ($Grid-gutter-size / -2); /* 4 */
-  }
 }
 
 /**
@@ -107,12 +101,11 @@ $Grid-gutter-size: 20px; // TODO: gutter variable
   text-align: left; /* 3 */
   vertical-align: top; /* 4 */
   width: 100%; /* 5 */
+}
 
-  // Modifier: gutters
-  @include theme(default) {
-    padding-left:  ($Grid-gutter-size / 2);
-    padding-right: ($Grid-gutter-size / 2);
-  }
+.Grid--withGutters > .Grid__cell {
+  padding-left:  ($Grid-gutter-size / 2);
+  padding-right: ($Grid-gutter-size / 2);
 }
 
 /**

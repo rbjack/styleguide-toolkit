@@ -1,4 +1,4 @@
-$body-bg: white;
+$body-bg: map-get($color, white);
 
 /**
  * Table Elements
