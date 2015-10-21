@@ -1,0 +1,109 @@
+// Module Variables
+$Site-footer-height: 100px; // required for '--withStickyFooter' modifier
+$Site-body-color: #ffffff;
+$Site-max-width: 1200;
+$Site-gutters: (16px / 2); // $base-line-height
+
+/**
+ * Site layout module
+ *
+ * This module creates the shell for the entire site.
+ */
+
+/**
+ * Add in the <html> class attribute
+ */
+
+.l-Site {}
+
+ /**
+  * Add in the <body> class attribute
+  */
+
+.l-Site__body {
+	background-color: $Site-body-color;
+}
+
+/**
+ * Modifier: Sticky Footer
+ * Aligns the footer to the bottom of the page
+ */
+
+.l-Site--withStickyFooter,
+.l-Site--withStickFooter > .l-Site__body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/**
+ * This is a wrapper for the elements inside the body
+ * 
+ * 1. Override the Grid Module default
+ */
+
+.l-Site__container {
+	padding: 0 $Site-gutters;
+	max-width: $Site-max-width;
+	margin: 0 auto !important; /* 1 */
+	background-color: $Site-body-color;
+}
+
+/**
+ * Modifier: Sticky Footer
+ *
+ * 1. Ensure that element stays at full height regardless of content.
+ * 2. Allows absolute position of element inside.
+ */
+
+.l-Site--withStickyFooter .l-Site__container {
+	min-height: 100%; /* 1 */
+	position: relative; /* 2 */
+}
+
+/**
+ * The header of the website
+ */
+
+.l-Site__header {}
+
+/**
+ * The footer of the website
+ * The footer must be the last element inside of the `.l-Site__containr`
+ */
+
+.l-Site__footer {
+	background-color: $Site-body-color;
+}
+
+/**
+ * Modifier: Sticky Footer
+ *
+ * 1. Height must be set to add padding for the list section divider
+ */
+
+.l-site--widthStickyFooter .l-Site__footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: $Site-footer-height;
+}
+
+/**
+ * Content divider(s) between the header & footer
+ */
+
+.l-Site__section {
+	display: block;
+}
+
+/**
+ * Modifier: Sticky Footer
+ *
+ * 1. padding bottom is greater or equal to the height of the footer
+ */
+
+.l-Site--withStickyFooter .l-Site__section--last {
+  padding-bottom: $Site-footer-height; /* 1 */
+}
+

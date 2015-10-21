@@ -40,8 +40,7 @@ $EQ-Selectors: ();
     }
     @each $state in $states {
       &[data-eq-state$="#{$state}"] {
-        //@extend %#{$extend}; // ERROR: duplicates selector, using gulp-minify-css to DRY styles
-        @content;
+        @extend %#{$extend};
       }
     }
   }

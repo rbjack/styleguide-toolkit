@@ -3,7 +3,7 @@
  */
 
 @each $eq in $element-queries {
-  @include eq($eq) {
+  @include eq-contains($eq) {
     
     /**
      * Specify the proportional position after an object.

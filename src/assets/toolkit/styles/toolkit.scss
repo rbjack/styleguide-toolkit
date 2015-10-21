@@ -13,8 +13,10 @@
 @import "elements/all"; 	// styling that targets plain HTML elements (no classes in here)
 
 // (prefixes are optional)
-@import "objects/all"; 		// modular organization of basic design patterns and re-usable abstractions; o-
+@import "objects/all"; 		// modular organization of basic design patterns and re-usable abstractions; (optional prefix: o-)
 													// generic enough to be built into a wysiwyg
+
+@import "layout/all";			// website shell architecture (prefix: l-)
 
 // CMS/MVC directory organization and/or naming conventions
 // "blocks/all";					// blocks; b-
@@ -25,10 +27,6 @@
 // "vendors/all";					// plugin styles incorperated into project; {VendorNamespace}-
 
 // "tests/all"; 					// AB testing, temparary, needs to be incorporated into appropriate directory after acceptance; ab-
-
-// "jss/all";							// DOM injected/manipulated classes and/or markup using javascript; jss- (js- is used as a javascript hook)
-//    vs
-// "widgets/all"; 				// DOM injected/manipulated classes and/or markup using javascript; w-
 
 @import "influences/all"; // overrides, helpers, utilities - these usually have !important rules, and that's okay.
 

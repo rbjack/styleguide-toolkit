@@ -118,19 +118,3 @@ $Grid-gutter-size: 20px; // TODO: gutter variable
   display: block;
   margin: 0 auto;
 }
-
-.Grid__cell--hasBackground {
-  @include theme(default) {
-    background-image: linear-gradient(to bottom, #6cab26, #6ceb86); /* W3C */
-    background-repeat: repeat-y;
-    background-position: 0 bottom;
-    background-size: 100% 1px;
-  }
-}
-
-.Grid--withGutter > .Grid__cell--hasBackground {
-  @include theme(default) {
-    background-position: ($Grid-gutter-size / 2) bottom;
-    background-size: calc(100% - #{$Grid-gutter-size}) 1px;
-  }
-}

@@ -1,6 +1,6 @@
-$body-bg: white;
-$table-bg: silver;
-$table-cell-padding: 10px;
+$Table-body-color: white;
+$Table-background-color: silver;
+$Table-cell-padding: 10px;
 $text-muted: #333;
 $line-height-computed: 1em;
 $line-height-base: 1em;
@@ -42,7 +42,7 @@ $state-danger-bg: red;
         vertical-align: top;
 
         @include theme(default) {
-          padding: $table-cell-padding;
+          padding: $Table-cell-padding;
           line-height: $line-height-base;
           border-top: 1px solid $table-border-color;
         }
@@ -261,7 +261,7 @@ $state-danger-bg: red;
 
   }
 
-  @include eq(xs) {
+  @include eq-contains(xs) {
     width: inherit;
     overflow-y: auto;
     -ms-overflow-style: auto;

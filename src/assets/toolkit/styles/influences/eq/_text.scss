@@ -1,5 +1,5 @@
 @each $eq in $element-queries {
-  @include eq($eq) {
+  @include eq-contains($eq) {
     /**
      * Word breaking
      *

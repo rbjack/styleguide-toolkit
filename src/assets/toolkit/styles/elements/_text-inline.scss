@@ -36,11 +36,13 @@ abbr {
 }
 
 // <b>	The HTML <b> Element represents a span of text stylistically different from normal text, without conveying any special importance or relevance. It is typically used for keywords in a summary, product names in a review, or other spans of text whose typical presentation would be boldfaced. Another example of its use is to mark the lead sentence of each paragraph of an article.
-// <bdi>	The HTML <bdi> Element (or Bi-Directional Isolation Element) isolates a span of text that might be formatted in a different direction from other text outside it.
-// <bdo>	The HTML <bdo> Element (or HTML bidirectional override element) is used to override the current directionality of text. It causes the directionality of the characters to be ignored in favor of the specified directionality.
-bdo {
+b {}
 
-}
+// <bdi>	The HTML <bdi> Element (or Bi-Directional Isolation Element) isolates a span of text that might be formatted in a different direction from other text outside it.
+bdi {}
+
+// <bdo>	The HTML <bdo> Element (or HTML bidirectional override element) is used to override the current directionality of text. It causes the directionality of the characters to be ignored in favor of the specified directionality.
+bdo {}
 
 //
 blockquote {
@@ -51,14 +53,32 @@ blockquote {
 }
 
 // <br>	The HTML <br> Element (or HTML Line Break Element) produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.
+br {}
+
 // <cite>	The HTML Citation Element (<cite>) represents a reference to a creative work. It must include the title of a work or a URL reference, which may be in an abbreviated form according to the conventions used for the addition of citation metadata.
+cite {}
+
 // <code>	The HTML Code Element (<code>) represents a fragment of computer code. By default, it is displayed in the browser's default monospace font.
+code {}
+
 // <data>	The HTML <data> Element links a given content with a machine-readable translation. If the content is time- or date-related, the <time> must be used.
+data {}
+
 // <dfn>	The HTML Definition Element (<dfn>) represents the defining instance of a term.
+dfn {}
+
 // <em>	The HTML Emphasis Element (<em>) marks text that has stress emphasis. The <em> element can be nested, with each level of nesting indicating a greater degree of emphasis.
+em {}
+
 // <i>	The HTML <i> Element represents a range of text that is set off from the normal text for some reason, for example, technical terms, foreign language phrases, or fictional character thoughts. It is typically displayed in italic type.
+i {}
+
 // <kbd>	The HTML Keyboard Input Element (<kbd>) represents user input and produces an inline element displayed in the browser's default monospace font.
+kbd {}
+
 // <mark>	The HTML Mark Element (<mark>) represents highlighted text, i.e., a run of text marked for reference purpose, due to its relevance in a particular context. For example it can be used in a page showing search results to highlight every instance of the searched-for word.
+mark {}
+
 // <q>	The HTML Quote Element (<q>) indicates that the enclosed text is a short inline quotation. This element is intended for short quotations that don't require paragraph breaks; for long quotations use <blockquote> element.
 q {
 	@media print {
@@ -66,18 +86,48 @@ q {
 		page-break-inside: avoid;
 	}
 }
+
 // <rp>	The HTML <rp> element is used to provide fall-back parenthesis for browsers non-supporting ruby annotations. Ruby annotations are for showing pronounciation of East Asian characters, like using Japanese furigana or Taiwainese bopomofo characters. The <rp> element is used in the case of lack of <ruby> element support its content has what should be displayed in order to indicate the presence of a ruby annotation, usually parentheses.
+rp {}
+
 // <rt>	Editorial review completed.
+rt {}
+
 // <rtc>	The HTML <rtc> Element embraces semantic annotations of characters presented in a ruby of <rb> elements used inside of <ruby> element. <rb> elements can have both pronunciation (<rt> and semantic (<rtc>) annotations.
+rtc {}
+
 // <ruby>	The HTML <ruby> Element represents a ruby annotation. Ruby annotations are for showing pronunciation of East Asian characters.
+ruby {}
+
 // <s>	The HTML Strikethrough Element (<s>) renders text with a strikethrough, or a line through it. Use the <s> element to represent things that are no longer relevant or no longer accurate. However, <s> is not appropriate when indicating document edits; for that, use the <del> and <ins> elements, as appropriate.
+s {}
+
 // <samp>	The HTML <samp> element is an element intended to identify sample output from a computer program. It is usually displayed in the browser's default monotype font (such as Lucida Console).
+samp {}
+
 // <small>	The HTML Small Element (<small>) makes the text font size one size smaller (for example, from large to medium, or from small to x-small) down to the browser's minimum font size.  In HTML5, this element is repurposed to represent side-comments and small print, including copyright and legal text, independent of its styled presentation.
+small {}
+
 // <span>	The HTML <span> element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element is appropriate. <span> is very much like a <div> element, but <div> is a block-level element whereas a <span> is an inline element.
+span {}
+
 // <strong>	The HTML Strong Element (<strong>) gives text strong importance, and is typically displayed in bold.
+strong {}
+
 // <sub>	The HTML Subscript Element (<sub>) defines a span of text that should be displayed, for typographic reasons, lower, and often smaller, than the main span of text.
+sub {}
+
 // <sup>	The HTML Superscript Element (<sup>) defines a span of text that should be displayed, for typographic reasons, higher, and often smaller, than the main span of text.
+sup {}
+
 // <time>	The HTML <time> element represents either a time on a 24-hour clock or a precise date in the Gregorian calendar (with optional time and timezone information).
+time {}
+
 // <u>	The HTML Underline Element (<u>) renders text with an underline, a line under the baseline of its content.
+u {}
+
 // <var>	The HTML Variable Element (<var>) represents a variable in a mathematical expression or a programming context.
+var {}
+
 // <wbr>	The Word Break Opportunity (<wbr>) HTML element represents a position within text where the browser may optionally break a line, though its line-breaking rules would not otherwise create a break at that location.
+wbr {}
